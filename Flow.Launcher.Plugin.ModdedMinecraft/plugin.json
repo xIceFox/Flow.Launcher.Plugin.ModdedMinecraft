@@ -1,9 +1,9 @@
 {
     "ID": "29CC512DD07E4AEE9E598135EB603081",
-    "ActionKeyword": "*",
+    "ActionKeyword": "mm",
     "Name": "ModdedMinecraft",
-    "Description": "a new plugin for Flow",
-    "Author": "AuthorName",
+    "Description": "A plugin to launch modded minecraft instances",
+    "Author": "Niklas Krebs",
     "Version": "1.0.0",
     "Language": "csharp",
     "Website": "https://github.com/AuthorName/Flow.Launcher.Plugin.ModdedMinecraft",
