@@ -1,0 +1,2 @@
+dotnet publish Flow.Launcher.Plugin.ModdedMinecraft -c Release -r win-x64 --no-self-contained
+Compress-Archive -LiteralPath Flow.Launcher.Plugin.ModdedMinecraft/bin/Release/win-x64/publish -DestinationPath Flow.Launcher.Plugin.ModdedMinecraft/bin/ModdedMinecraft.zip -Force

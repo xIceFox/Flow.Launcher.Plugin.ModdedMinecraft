@@ -1,2 +1,8 @@
-# flow-launcher-modded-mc
-A flow plugin to launch minecraft modpacks
+Flow.Launcher.Plugin.ModdedMinecraft
+==================
+
+A plugin for the [Flow launcher](https://github.com/Flow-Launcher/Flow.Launcher).
+
+### Usage
+
+    * <arguments>
