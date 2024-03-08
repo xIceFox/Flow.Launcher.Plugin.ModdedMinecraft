@@ -7,6 +7,6 @@
     "Version": "1.0.0",
     "Language": "csharp",
     "Website": "https://github.com/AuthorName/Flow.Launcher.Plugin.ModdedMinecraft",
-    "IcoPath": "icon.png",
+    "IcoPath": "icon.ico",
     "ExecuteFileName": "Flow.Launcher.Plugin.ModdedMinecraft.dll"
 }
