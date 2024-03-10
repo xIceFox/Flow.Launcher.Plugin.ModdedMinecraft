@@ -11,13 +11,16 @@
     <UserControl.Resources>
         <converters:SliderConverter x:Key="SliderConverter"/>
     </UserControl.Resources>
-    <StackPanel Margin="70, 25, 25, 25" Orientation="Vertical" HorizontalAlignment="Stretch">
-        <DockPanel Height="30" HorizontalAlignment="Stretch" Name="ParentPanel" LastChildFill="True">
+    <StackPanel Margin="70, 15, 25, 10" Orientation="Vertical" HorizontalAlignment="Stretch">
+        <DockPanel Height="30" HorizontalAlignment="Stretch" Name="ParentPanel" LastChildFill="True"
+                   Margin="0, 0, 0, 15">
             <Label Margin="0, 0, 20, 0" VerticalAlignment="Center" DockPanel.Dock="Left">Maximum RAM Allocation</Label>
             <Label Margin="20, 0, 0, 0" VerticalAlignment="Center" DockPanel.Dock="Right"
                    Content="{Binding ElementName=MaxRamAllocation, Path=Value, Converter={StaticResource SliderConverter}}">
             </Label>
             <Slider Name="MaxRamAllocation" VerticalAlignment="Center" Minimum="1024" IsSnapToTickEnabled="True" TickFrequency="64" Value="{Binding RamAllocation}"></Slider>
         </DockPanel>
+        <Separator></Separator>
+        <Button Height="40" Width="250" Margin="0, 10, 0, 0" Click="DownloadCurseforgeIcons">Download missing modpack icons</Button>
     </StackPanel>
 </UserControl>

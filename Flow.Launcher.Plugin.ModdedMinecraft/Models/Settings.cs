@@ -9,4 +9,6 @@ public class Settings
     /// 
     /// </summary>
     public double RamAllocation { get; set; } = 4096;
+
+    public bool FirstBoot { get; set; } = true;
 }

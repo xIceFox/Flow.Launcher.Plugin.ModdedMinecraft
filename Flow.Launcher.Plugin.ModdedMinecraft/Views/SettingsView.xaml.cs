@@ -1,4 +1,6 @@
-﻿using System.Windows.Controls;
+﻿using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace Flow.Launcher.Plugin.ModdedMinecraft.Views;
 
@@ -7,15 +9,22 @@ namespace Flow.Launcher.Plugin.ModdedMinecraft.Views;
 /// </summary>
 public partial class SettingsView : UserControl
 {
+    private readonly ModdedMinecraft _pluginBase;
+
     /// <summary>
     /// 
     /// </summary>
-    public SettingsView(SettingsViewModel viewModel)
+    public SettingsView(SettingsViewModel viewModel, ModdedMinecraft pluginBase)
     {
         InitializeComponent();
+        _pluginBase = pluginBase;
         DataContext = viewModel;
-        var ram = new Microsoft.VisualBasic.Devices.ComputerInfo().TotalPhysicalMemory / 1024 / 1024;
-        MaxRamAllocation.Maximum = ram;
+        MaxRamAllocation.Maximum =
+            (double)new Microsoft.VisualBasic.Devices.ComputerInfo().TotalPhysicalMemory / 1024 / 1024;
     }
-    
+
+    private void DownloadCurseforgeIcons(object sender, RoutedEventArgs e)
+    {
+        Task.Run(() => _pluginBase.CollectCurseforgeIcons());
+    }
 }
